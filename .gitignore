@@ -4,4 +4,3 @@ __pycache__
 db.sqlite3
 wishlist/geckodriver.log
 media/images
-wishlist/travel_wishlist/migrations/

@@ -5,6 +5,7 @@ from .forms import NewPlaceForm, TripReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from . import photo_manager
+import copy
 
 
 @login_required
@@ -53,19 +54,19 @@ def place_details(request, place_pk):
 
     if request.method == 'POST':
 
-        form = TripReviewForm(request.POST, request.FILES)
+        # get a copy of the object so have a reference to the old photo,
+        # just in case it needs to be deleted; user saves new photo or clears old one.
+        old_place = get_object_or_404(Place, pk=place_pk)
 
+        form = TripReviewForm(request.POST, request.FILES, instance=place)
         if form.is_valid():
-            updated_place = form.save(commit=False)
-            place.date_visited = updated_place.date_visited
-            place.notes = updated_place.notes
 
-            if updated_place.photo:
-                photo_manager.delete_photo(place.photo)
+            # If there was a photo added or removed, delete any old photo
+            if 'photo' in form.changed_data:
+                photo_manager.delete_photo(old_place.photo)
 
-            place.photo = updated_place.photo
+            form.save()
 
-            place.save()
             messages.info(request, 'Trip information updated!')
 
         else:
