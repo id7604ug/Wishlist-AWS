@@ -151,11 +151,11 @@ MEDIA_URL = '/media/'
 
 # If we are on AWS...
 if 'RDS_DB_NAME' in os.environ:
-    
+
     STATICFILES_LOCATION = 'static'
     MEDIAFILES_LOCATION = 'media'
 
-    AWS_STORAGE_BUCKET_NAME = 'travel-wishlist-photo-store'
+    AWS_STORAGE_BUCKET_NAME = 'wishlist-id7604ug-aws'
 
     AWS_ACCESS_KEY_ID = os.getenv('S3_AWS_ACCESS_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_KEY')
