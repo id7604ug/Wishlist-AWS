@@ -23,7 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'z5p$j4li6!g#c@7u&l0fgnj&w4fh!_c04tebql1d#qo-75^53i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+#Security Warning: don't run with debug turned on in production!
+if os.getenv('DJANGO_DEBUG'):
+    DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -137,7 +141,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
 
@@ -152,3 +155,20 @@ AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_ACCESS_KEY')
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+# If we are on AWS...
+if 'RDS_DB_NAME' in os.environ:
+
+    AWS_STORAGE_BUCKET_NAME = 'travel-wishlist-photo-store'
+
+    AWS_ACCESS_KEY_ID = os.getenv('S3_AWS_ACCESS_ID')
+    AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_KEY')
+
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+    STATIC_URL = 'https://%s/%s/' % ( AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+    STATICFILES_STORAGE = 'wishlist.custom_storages.StaticStorage'
+
+    MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+    DEFAULT_FILE_STORAGE = 'wishlist.custom_storages.MediaStorage'
