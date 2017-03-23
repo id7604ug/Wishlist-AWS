@@ -25,7 +25,7 @@ SECRET_KEY = 'z5p$j4li6!g#c@7u&l0fgnj&w4fh!_c04tebql1d#qo-75^53i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#Security Warning: don't run with debug turned on in production!
+# Security Warning: don't run with debug turned on in production!
 if os.getenv('DJANGO_DEBUG'):
     DEBUG = True
 
