@@ -156,7 +156,7 @@ AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_ACCESS_KEY')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-STATICFILE_LOCATION = 'static'
+STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media'
 
 # If we are on AWS...
