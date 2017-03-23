@@ -81,6 +81,7 @@ WSGI_APPLICATION = 'wishlist.wsgi.application'
 
 
 
+
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
@@ -104,7 +105,6 @@ else:
             'PORT': '',
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -141,26 +141,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+# If running locally...
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 MEDIA_URL = '/media/'
 
-# Bucket Stuff
-AWS_STORAGE_BUCKET_NAME = 'wishlist-id7604ug-aws'
-
-AWS_ACCESS_KEY_ID = os.getenv('S3_AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_ACCESS_KEY')
-
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
-STATICFILES_LOCATION = 'static'
-MEDIAFILES_LOCATION = 'media'
-
 # If we are on AWS...
 if 'RDS_DB_NAME' in os.environ:
+    
+    STATICFILES_LOCATION = 'static'
+    MEDIAFILES_LOCATION = 'media'
 
     AWS_STORAGE_BUCKET_NAME = 'travel-wishlist-photo-store'
 
