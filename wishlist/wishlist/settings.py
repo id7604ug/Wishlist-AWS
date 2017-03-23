@@ -143,3 +143,12 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 MEDIA_URL = '/media/'
+
+# Bucket Stuff
+AWS_STORAGE_BUCKET_NAME = 'wishlist-id7604ug-aws'
+
+AWS_ACCESS_KEY_ID = os.getenv('S3_AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('S3_AWS_SECRET_ACCESS_KEY')
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
