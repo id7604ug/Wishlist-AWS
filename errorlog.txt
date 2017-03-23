@@ -1,0 +1,453 @@
+Retrieving logs...
+============= i-0e8b96fb1299a59ae ==============
+-------------------------------------
+/var/log/httpd/error_log
+-------------------------------------
+[Thu Mar 23 19:49:32.563010 2017] [:error] [pid 4809] 
+[Thu Mar 23 19:49:42.473905 2017] [:error] [pid 4808] Internal Server Error: /
+[Thu Mar 23 19:49:42.473942 2017] [:error] [pid 4808] Traceback (most recent call last):
+[Thu Mar 23 19:49:42.473944 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+[Thu Mar 23 19:49:42.473947 2017] [:error] [pid 4808]     return self.cursor.execute(sql, params)
+[Thu Mar 23 19:49:42.473948 2017] [:error] [pid 4808] psycopg2.ProgrammingError: relation "travel_wishlist_place" does not exist
+[Thu Mar 23 19:49:42.473950 2017] [:error] [pid 4808] LINE 1: ...te_visited", "travel_wishlist_place"."photo" FROM "travel_wi...
+[Thu Mar 23 19:49:42.473952 2017] [:error] [pid 4808]                                                              ^
+[Thu Mar 23 19:49:42.473954 2017] [:error] [pid 4808] 
+[Thu Mar 23 19:49:42.473955 2017] [:error] [pid 4808] 
+[Thu Mar 23 19:49:42.473957 2017] [:error] [pid 4808] The above exception was the direct cause of the following exception:
+[Thu Mar 23 19:49:42.473958 2017] [:error] [pid 4808] 
+[Thu Mar 23 19:49:42.473960 2017] [:error] [pid 4808] Traceback (most recent call last):
+[Thu Mar 23 19:49:42.473962 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Thu Mar 23 19:49:42.473964 2017] [:error] [pid 4808]     response = get_response(request)
+[Thu Mar 23 19:49:42.473965 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 187, in _get_response
+[Thu Mar 23 19:49:42.473967 2017] [:error] [pid 4808]     response = self.process_exception_by_middleware(e, request)
+[Thu Mar 23 19:49:42.473969 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 185, in _get_response
+[Thu Mar 23 19:49:42.473971 2017] [:error] [pid 4808]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Thu Mar 23 19:49:42.473972 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+[Thu Mar 23 19:49:42.473974 2017] [:error] [pid 4808]     return view_func(request, *args, **kwargs)
+[Thu Mar 23 19:49:42.473976 2017] [:error] [pid 4808]   File "/opt/python/current/app/wishlist/travel_wishlist/views.py", line 30, in place_list
+[Thu Mar 23 19:49:42.473978 2017] [:error] [pid 4808]     return render(request, 'travel_wishlist/wishlist.html', {'places' : places, 'form' : form})
+[Thu Mar 23 19:49:42.473980 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/shortcuts.py", line 30, in render
+[Thu Mar 23 19:49:42.473981 2017] [:error] [pid 4808]     content = loader.render_to_string(template_name, context, request, using=using)
+[Thu Mar 23 19:49:42.473983 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/loader.py", line 68, in render_to_string
+[Thu Mar 23 19:49:42.473985 2017] [:error] [pid 4808]     return template.render(context, request)
+[Thu Mar 23 19:49:42.473987 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 66, in render
+[Thu Mar 23 19:49:42.473989 2017] [:error] [pid 4808]     return self.template.render(context)
+[Thu Mar 23 19:49:42.473990 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 208, in render
+[Thu Mar 23 19:49:42.473992 2017] [:error] [pid 4808]     return self._render(context)
+[Thu Mar 23 19:49:42.473994 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 199, in _render
+[Thu Mar 23 19:49:42.473995 2017] [:error] [pid 4808]     return self.nodelist.render(context)
+[Thu Mar 23 19:49:42.473997 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 994, in render
+[Thu Mar 23 19:49:42.473999 2017] [:error] [pid 4808]     bit = node.render_annotated(context)
+[Thu Mar 23 19:49:42.474003 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 961, in render_annotated
+[Thu Mar 23 19:49:42.474005 2017] [:error] [pid 4808]     return self.render(context)
+[Thu Mar 23 19:49:42.474007 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 174, in render
+[Thu Mar 23 19:49:42.474009 2017] [:error] [pid 4808]     return compiled_parent._render(context)
+[Thu Mar 23 19:49:42.474011 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 199, in _render
+[Thu Mar 23 19:49:42.474012 2017] [:error] [pid 4808]     return self.nodelist.render(context)
+[Thu Mar 23 19:49:42.474014 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 994, in render
+[Thu Mar 23 19:49:42.474016 2017] [:error] [pid 4808]     bit = node.render_annotated(context)
+[Thu Mar 23 19:49:42.474017 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 961, in render_annotated
+[Thu Mar 23 19:49:42.474019 2017] [:error] [pid 4808]     return self.render(context)
+[Thu Mar 23 19:49:42.474021 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 70, in render
+[Thu Mar 23 19:49:42.474023 2017] [:error] [pid 4808]     result = block.nodelist.render(context)
+[Thu Mar 23 19:49:42.474024 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 994, in render
+[Thu Mar 23 19:49:42.474026 2017] [:error] [pid 4808]     bit = node.render_annotated(context)
+[Thu Mar 23 19:49:42.474028 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/base.py", line 961, in render_annotated
+[Thu Mar 23 19:49:42.474030 2017] [:error] [pid 4808]     return self.render(context)
+[Thu Mar 23 19:49:42.474031 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 166, in render
+[Thu Mar 23 19:49:42.474033 2017] [:error] [pid 4808]     len_values = len(values)
+[Thu Mar 23 19:49:42.474035 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/models/query.py", line 238, in __len__
+[Thu Mar 23 19:49:42.474036 2017] [:error] [pid 4808]     self._fetch_all()
+[Thu Mar 23 19:49:42.474038 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+[Thu Mar 23 19:49:42.474040 2017] [:error] [pid 4808]     self._result_cache = list(self.iterator())
+[Thu Mar 23 19:49:42.474042 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/models/query.py", line 54, in __iter__
+[Thu Mar 23 19:49:42.474043 2017] [:error] [pid 4808]     results = compiler.execute_sql()
+[Thu Mar 23 19:49:42.474045 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+[Thu Mar 23 19:49:42.474047 2017] [:error] [pid 4808]     cursor.execute(sql, params)
+[Thu Mar 23 19:49:42.474049 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/backends/utils.py", line 79, in execute
+[Thu Mar 23 19:49:42.474050 2017] [:error] [pid 4808]     return super(CursorDebugWrapper, self).execute(sql, params)
+[Thu Mar 23 19:49:42.474052 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+[Thu Mar 23 19:49:42.474054 2017] [:error] [pid 4808]     return self.cursor.execute(sql, params)
+[Thu Mar 23 19:49:42.474056 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/utils.py", line 94, in __exit__
+[Thu Mar 23 19:49:42.474057 2017] [:error] [pid 4808]     six.reraise(dj_exc_type, dj_exc_value, traceback)
+[Thu Mar 23 19:49:42.474061 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/utils/six.py", line 685, in reraise
+[Thu Mar 23 19:49:42.474063 2017] [:error] [pid 4808]     raise value.with_traceback(tb)
+[Thu Mar 23 19:49:42.474065 2017] [:error] [pid 4808]   File "/opt/python/run/venv/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+[Thu Mar 23 19:49:42.474067 2017] [:error] [pid 4808]     return self.cursor.execute(sql, params)
+[Thu Mar 23 19:49:42.474068 2017] [:error] [pid 4808] django.db.utils.ProgrammingError: relation "travel_wishlist_place" does not exist
+[Thu Mar 23 19:49:42.474070 2017] [:error] [pid 4808] LINE 1: ...te_visited", "travel_wishlist_place"."photo" FROM "travel_wi...
+[Thu Mar 23 19:49:42.474072 2017] [:error] [pid 4808]                                                              ^
+[Thu Mar 23 19:49:42.474078 2017] [:error] [pid 4808] 
+[Thu Mar 23 19:57:02.244108 2017] [mpm_prefork:notice] [pid 4802] AH00169: caught SIGTERM, shutting down
+[Thu Mar 23 19:57:02.503453 2017] [suexec:notice] [pid 6258] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 23 19:57:02.514283 2017] [so:warn] [pid 6258] AH01574: module wsgi_module is already loaded, skipping
+[Thu Mar 23 19:57:02.516406 2017] [auth_digest:notice] [pid 6258] AH01757: generating secret for digest authentication ...
+[Thu Mar 23 19:57:02.516972 2017] [lbmethod_heartbeat:notice] [pid 6258] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 23 19:57:02.528203 2017] [mpm_prefork:notice] [pid 6258] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Thu Mar 23 19:57:02.528244 2017] [core:notice] [pid 6258] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 23 19:57:05.782359 2017] [:error] [pid 6263] Not Found: /accounts/login/
+[Thu Mar 23 19:57:07.130953 2017] [:error] [pid 6264] Not Found: /accounts/login/
+[Thu Mar 23 19:57:08.147210 2017] [:error] [pid 6265] Not Found: /accounts/login/
+[Thu Mar 23 19:57:09.156207 2017] [:error] [pid 6263] Not Found: /accounts/login/
+[Thu Mar 23 20:09:34.926945 2017] [:error] [pid 6264] Not Found: /1-888-384-7002/chrm/
+[Thu Mar 23 20:09:40.351478 2017] [:error] [pid 6263] Not Found: /favicon.ico
+[Thu Mar 23 20:09:40.506725 2017] [:error] [pid 6265] Not Found: /1-888-384-7002/chrm/
+[Thu Mar 23 20:59:55.012019 2017] [mpm_prefork:notice] [pid 6258] AH00169: caught SIGTERM, shutting down
+[Thu Mar 23 20:59:55.285365 2017] [suexec:notice] [pid 1311] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 23 20:59:55.296444 2017] [so:warn] [pid 1311] AH01574: module wsgi_module is already loaded, skipping
+[Thu Mar 23 20:59:55.298996 2017] [auth_digest:notice] [pid 1311] AH01757: generating secret for digest authentication ...
+[Thu Mar 23 20:59:55.299616 2017] [lbmethod_heartbeat:notice] [pid 1311] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 23 20:59:55.302218 2017] [mpm_prefork:notice] [pid 1311] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Thu Mar 23 20:59:55.302230 2017] [core:notice] [pid 1311] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 23 20:59:58.547180 2017] [:error] [pid 1316] Not Found: /accounts/login/
+[Thu Mar 23 20:59:59.888223 2017] [:error] [pid 1317] Not Found: /accounts/login/
+[Thu Mar 23 21:00:00.903538 2017] [:error] [pid 1318] Not Found: /accounts/login/
+[Thu Mar 23 21:00:01.912520 2017] [:error] [pid 1316] Not Found: /accounts/login/
+
+
+
+-------------------------------------
+/opt/python/log/supervisord.log
+-------------------------------------
+2017-03-23 19:04:49,413 CRIT Supervisor running as root (no user in config file)
+2017-03-23 19:04:49,425 INFO RPC interface 'supervisor' initialized
+2017-03-23 19:04:49,425 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-03-23 19:04:49,425 INFO supervisord started with pid 2833
+2017-03-23 19:04:50,427 INFO spawned: 'httpd' with pid 2850
+2017-03-23 19:04:52,131 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-23 19:17:36,602 INFO stopped: httpd (exit status 0)
+2017-03-23 19:17:37,606 INFO spawned: 'httpd' with pid 3529
+2017-03-23 19:17:38,669 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-23 19:20:13,255 INFO stopped: httpd (exit status 0)
+2017-03-23 19:20:14,259 INFO spawned: 'httpd' with pid 4317
+2017-03-23 19:20:15,327 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-23 19:22:17,239 INFO stopped: httpd (exit status 0)
+2017-03-23 19:22:18,243 INFO spawned: 'httpd' with pid 4802
+2017-03-23 19:22:19,311 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-23 19:57:02,444 INFO stopped: httpd (exit status 0)
+2017-03-23 19:57:02,447 INFO spawned: 'httpd' with pid 6258
+2017-03-23 19:57:03,503 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-23 20:59:55,212 INFO stopped: httpd (exit status 0)
+2017-03-23 20:59:55,215 INFO spawned: 'httpd' with pid 1311
+2017-03-23 20:59:56,285 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
+
+-------------------------------------
+/var/log/httpd/access_log
+-------------------------------------
+::1 (-) - - [23/Mar/2017:19:25:13 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:25:15 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:26:01 +0000] "GET / HTTP/1.1" 500 189535 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:26:07 +0000] "GET /admin/ HTTP/1.1" 200 3479 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Mar/2017:19:27:06 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:27:07 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:27:12 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:27:13 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /admin/auth/user/ HTTP/1.1" 200 6350 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 237 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/core.js HTTP/1.1" 404 221 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/css/changelists.css HTTP/1.1" 404 230 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 228 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 243 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /admin/jsi18n/ HTTP/1.1" 200 3189 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/actions.js HTTP/1.1" 404 224 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/urlify.js HTTP/1.1" 404 223 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 228 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 239 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/img/search.svg HTTP/1.1" 404 225 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:18 +0000] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 227 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/core.js HTTP/1.1" 404 221 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 237 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 228 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 243 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/actions.js HTTP/1.1" 404 224 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/urlify.js HTTP/1.1" 404 223 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 228 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 239 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/img/search.svg HTTP/1.1" 404 225 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:19 +0000] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 227 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/auth/user/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:28:23 +0000] "GET /admin/ HTTP/1.1" 200 3479 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Mar/2017:19:28:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:18 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:19 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:20 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:21 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:22 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:23 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:24 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:26 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:27 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:28 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:29 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:29:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:48:37 +0000] "GET / HTTP/1.1" 500 189345 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:49:15 +0000] "GET /places/1 HTTP/1.1" 404 3006 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:49:21 +0000] "GET /place/1 HTTP/1.1" 500 123893 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:49:25 +0000] "GET /place/11 HTTP/1.1" 500 123920 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:49:32 +0000] "GET /place/3 HTTP/1.1" 500 123893 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:19:49:42 +0000] "GET / HTTP/1.1" 500 189343 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Mar/2017:19:50:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:50:42 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:50:43 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:50:44 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:19:51:01 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:05 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:05 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:06 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:07 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:08 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:08 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:09 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:19:57:09 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:20:00:03 +0000] "GET /admin/ HTTP/1.1" 200 3479 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:20:00:03 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.16.240 (134.29.246.245) - - [23/Mar/2017:20:00:03 +0000] "GET /static/admin/css/dashboard.css HTTP/1.1" 404 228 "http://wishlist-id7604ug-aws-dev.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Mar/2017:20:01:03 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:01:04 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:01:08 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:01:09 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.16.240 (24.0.237.51) - - [23/Mar/2017:20:09:34 +0000] "GET /1-888-384-7002/chrm/ HTTP/1.1" 404 2999 "https://us.search.yahoo.com/yhs/search?hspart=iry&hsimp=yhs-fullyhosted_003&type=wbf_stragmedent_16_34&param1=1&param2=f%3D4%26b%3Dchmm%26cc%3Dus%26pa%3DWincy%26cd%3D2XzuyEtN2Y1L1QzuyD0C0EtD0CyD0ByD0B0CyBzz0FzyzztAtN0D0Tzu0StCyBtDtCtN1L2XzutAtFtByEtFyCtFyCtN1L1Czu1ByEtN1L1G1B1V1N2Y1L1Qzu2StAzytDyDyDzyyEtCtGyByB0E0EtG0AzyyC0DtGtC0Fzy0CtGyEyC0F0EyCtB0AtD0D0E0F0A2QtN1M1F1B2Z1V1N2Y1L1Qzu2SyBtDzzzztCzzyEyDtG0B0AtA0CtGyEzz0F0BtGzytC0CtDtGtAyB0C0CyDyEyByCyCzz0CtD2QtN0A0LzuyEtN1B2Z1V1T1S1NzutBtAyBtA%26cr%3D2115211558%26a%3Dwbf_stragmedent_16_34%26os_ver%3D10.0%26os%3DWindows%2B10%2BHome&p=ebay" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2684.0 Safari/537.36"
+172.31.16.240 (24.0.237.51) - - [23/Mar/2017:20:09:40 +0000] "GET /favicon.ico HTTP/1.1" 404 2972 "http://52.37.113.190/1-888-384-7002/chrm/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2684.0 Safari/537.36"
+172.31.16.240 (24.0.237.51) - - [23/Mar/2017:20:09:40 +0000] "GET /1-888-384-7002/chrm/ HTTP/1.1" 404 2999 "https://us.search.yahoo.com/yhs/search?hspart=iry&hsimp=yhs-fullyhosted_003&type=wbf_stragmedent_16_34&param1=1&param2=f%3D4%26b%3Dchmm%26cc%3Dus%26pa%3DWincy%26cd%3D2XzuyEtN2Y1L1QzuyD0C0EtD0CyD0ByD0B0CyBzz0FzyzztAtN0D0Tzu0StCyBtDtCtN1L2XzutAtFtByEtFyCtFyCtN1L1Czu1ByEtN1L1G1B1V1N2Y1L1Qzu2StAzytDyDyDzyyEtCtGyByB0E0EtG0AzyyC0DtGtC0Fzy0CtGyEyC0F0EyCtB0AtD0D0E0F0A2QtN1M1F1B2Z1V1N2Y1L1Qzu2SyBtDzzzztCzzyEyDtG0B0AtA0CtGyEzz0F0BtGzytC0CtDtGtAyB0C0CyDyEyByCyCzz0CtD2QtN0A0LzuyEtN1B2Z1V1T1S1NzutBtAyBtA%26cr%3D2115211558%26a%3Dwbf_stragmedent_16_34%26os_ver%3D10.0%26os%3DWindows%2B10%2BHome&p=ebay" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2684.0 Safari/537.36"
+::1 (-) - - [23/Mar/2017:20:10:41 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:10:42 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:10:46 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:10:47 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:11:02 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.43.82 (219.92.43.122) - - [23/Mar/2017:20:13:57 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+172.31.16.240 (139.0.244.48) - - [23/Mar/2017:20:18:30 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+172.31.16.240 (139.0.244.48) - - [23/Mar/2017:20:18:33 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+172.31.16.240 (139.0.244.48) - - [23/Mar/2017:20:18:35 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+172.31.16.240 (139.0.244.48) - - [23/Mar/2017:20:18:55 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+172.31.16.240 (139.0.244.48) - - [23/Mar/2017:20:19:08 +0000] "GET / HTTP/1.1" 302 - "-" "-"
+::1 (-) - - [23/Mar/2017:20:19:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:20:02 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:20:07 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [23/Mar/2017:20:20:12 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+127.0.0.1 (-) - - [23/Mar/2017:20:59:57 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:20:59:58 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:20:59:59 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:20:59:59 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:21:00:00 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:21:00:00 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:21:00:01 +0000] "GET / HTTP/1.1" 302 - "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Mar/2017:21:00:01 +0000] "GET /accounts/login/?next=/ HTTP/1.1" 404 2987 "-" "Python-urllib/2.7"
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+     creating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/
+     creating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/travel_wishlist/
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/travel_wishlist/base.html  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/travel_wishlist/place_detail.html  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/travel_wishlist/visited.html  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/templates/travel_wishlist/wishlist.html  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/tests.py  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/urls.py  
+    inflating: /opt/python/ondeck/app/wishlist/travel_wishlist/views.py  
+     creating: /opt/python/ondeck/app/wishlist/wishlist/
+   extracting: /opt/python/ondeck/app/wishlist/wishlist/__init__.py  
+    inflating: /opt/python/ondeck/app/wishlist/wishlist/custom_storages.py  
+    inflating: /opt/python/ondeck/app/wishlist/wishlist/settings.py  
+    inflating: /opt/python/ondeck/app/wishlist/wishlist/urls.py  
+    inflating: /opt/python/ondeck/app/wishlist/wishlist/wsgi.py  
+[2017-03-23T21:00:58.914Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
+[2017-03-23T21:00:59.435Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
+  Requirement already satisfied (use --upgrade to upgrade): appdirs==1.4.3 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 1))
+  Requirement already satisfied (use --upgrade to upgrade): boto==2.46.1 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 2))
+  Requirement already satisfied (use --upgrade to upgrade): Django==1.10.5 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 3))
+  Requirement already satisfied (use --upgrade to upgrade): django-storages==1.5.2 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 4))
+  Requirement already satisfied (use --upgrade to upgrade): olefile==0.44 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 5))
+  Requirement already satisfied (use --upgrade to upgrade): packaging==16.8 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 6))
+  Requirement already satisfied (use --upgrade to upgrade): Pillow==4.0.0 in /opt/python/run/venv/lib64/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 7))
+  Requirement already satisfied (use --upgrade to upgrade): psycopg2==2.6.2 in /opt/python/run/venv/lib64/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 8))
+  Requirement already satisfied (use --upgrade to upgrade): pyparsing==2.2.0 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 9))
+  Requirement already satisfied (use --upgrade to upgrade): six==1.10.0 in /opt/python/run/venv/lib/python3.4/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 10))
+  You are using pip version 7.1.2, however version 9.0.1 is available.
+  You should consider upgrading via the 'pip install --upgrade pip' command.
+[2017-03-23T21:00:59.435Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
+[2017-03-23T21:01:00.795Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
+[2017-03-23T21:01:00.795Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
+[2017-03-23T21:01:00.795Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
+[2017-03-23T21:01:01.076Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2017-03-23T21:01:01.077Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws] : Starting activity...
+[2017-03-23T21:01:01.927Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Test for Command 01_migrate] : Starting activity...
+[2017-03-23T21:01:01.936Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Test for Command 01_migrate] : Completed activity. Result:
+  
+  Completed successfully.
+[2017-03-23T21:01:01.937Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 01_migrate] : Starting activity...
+[2017-03-23T21:01:02.590Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 01_migrate] : Completed activity. Result:
+  Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, travel_wishlist
+  Running migrations:
+  No migrations to apply.
+  
+[2017-03-23T21:01:03.441Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Test for Command 02_createsu] : Starting activity...
+[2017-03-23T21:01:03.444Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Test for Command 02_createsu] : Completed activity. Result:
+  
+  Completed successfully.
+[2017-03-23T21:01:03.445Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 02_createsu] : Starting activity...
+[2017-03-23T21:01:03.841Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 02_createsu] : Completed activity.
+[2017-03-23T21:01:04.694Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 03_collectstatic] : Starting activity...
+[2017-03-23T21:01:05.939Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 03_collectstatic] : Activity execution failed, because: Traceback (most recent call last):
+  File "wishlist/manage.py", line 22, in <module>
+  execute_from_command_line(sys.argv)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line
+  utility.execute()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/__init__.py", line 359, in execute
+  self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/base.py", line 294, in run_from_argv
+  self.execute(*args, **cmd_options)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/base.py", line 345, in execute
+  output = self.handle(*args, **options)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 193, in handle
+  collected = self.collect()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 124, in collect
+  handler(path, prefixed_path, storage)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 349, in copy_file
+  if not self.delete_file(path, prefixed_path, source_storage):
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 255, in delete_file
+  if self.storage.exists(prefixed_path):
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/storages/backends/s3boto.py", line 454, in exists
+  return k.exists()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/key.py", line 539, in exists
+  return bool(self.bucket.lookup(self.name, headers=headers))
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 143, in lookup
+  return self.get_key(key_name, headers=headers)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 193, in get_key
+  key, resp = self._get_key_internal(key_name, headers, query_args_l)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 231, in _get_key_internal
+  response.status, response.reason, '')
+  boto.exception.S3ResponseError: S3ResponseError: 403 Forbidden
+  
+   (ElasticBeanstalk::ExternalInvocationError)
+
+
+[2017-03-23T21:01:05.939Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws/Command 03_collectstatic] : Activity failed.
+[2017-03-23T21:01:05.939Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild/postbuild_0_wishlist_id7604ug_aws] : Activity failed.
+[2017-03-23T21:01:05.939Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Activity failed.
+[2017-03-23T21:01:05.957Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0/EbExtensionPostBuild] : Activity failed.
+[2017-03-23T21:01:05.957Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15/AppDeployStage0] : Activity failed.
+[2017-03-23T21:01:05.957Z] INFO  [1481]  - [Application update app-af2b-170323_160057@15] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy failed
+[2017-03-23T21:01:30.522Z] INFO  [1805]  - [CMD-TailLogs] : Starting activity...
+[2017-03-23T21:01:30.522Z] INFO  [1805]  - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2017-03-23T21:01:30.522Z] INFO  [1805]  - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2017-03-23T21:01:30.522Z] INFO  [1805]  - [CMD-TailLogs/TailLogs] : Starting activity...
+[2017-03-23T21:01:30.522Z] INFO  [1805]  - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+[2017-03-23T21:00:56.343Z] INFO  [1481]  : Command processor should execute command.
+[2017-03-23T21:00:56.343Z] DEBUG [1481]  : Storing current stage..
+[2017-03-23T21:00:56.343Z] DEBUG [1481]  : Stage_num does not exist. Not saving null stage. Returning..
+[2017-03-23T21:00:56.343Z] DEBUG [1481]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-03-23T21:00:56.343Z] DEBUG [1481]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-03-23T21:00:56.344Z] DEBUG [1481]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-03-23T21:00:56.344Z] INFO  [1481]  : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-03-23T21:00:56.346Z] INFO  [1481]  : Updating Command definition of addon logpublish.
+[2017-03-23T21:00:56.346Z] INFO  [1481]  : Updating Command definition of addon logstreaming.
+[2017-03-23T21:00:56.346Z] DEBUG [1481]  : Refreshing metadata...
+[2017-03-23T21:00:56.596Z] DEBUG [1481]  : Refreshed environment metadata.
+[2017-03-23T21:00:56.596Z] DEBUG [1481]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-03-23T21:00:56.596Z] DEBUG [1481]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-03-23T21:00:56.597Z] INFO  [1481]  : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-03-23T21:00:56.598Z] INFO  [1481]  : Updating Command definition of addon logpublish.
+[2017-03-23T21:00:56.598Z] INFO  [1481]  : Updating Command definition of addon logstreaming.
+[2017-03-23T21:00:56.598Z] DEBUG [1481]  : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
+[2017-03-23T21:00:56.598Z] DEBUG [1481]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
+[2017-03-23T21:00:56.691Z] INFO  [1481]  : Loading manifest from bucket 'elasticbeanstalk-us-west-2-340207255082' using computed S3 key 'resources/environments/e-mer5ubtspm/_runtime/versions/manifest_1490302853268'.
+[2017-03-23T21:00:56.801Z] INFO  [1481]  : Updated manifest cache: deployment ID 15 and serial 23.
+[2017-03-23T21:00:56.801Z] DEBUG [1481]  : Loaded definition of Command CMD-AppDeploy.
+[2017-03-23T21:00:56.801Z] INFO  [1481]  : Executing Application update
+[2017-03-23T21:00:56.801Z] INFO  [1481]  : Executing command: CMD-AppDeploy...
+[2017-03-23T21:00:56.802Z] INFO  [1481]  : Executing command CMD-AppDeploy activities...
+[2017-03-23T21:00:56.802Z] DEBUG [1481]  : Setting environment variables..
+[2017-03-23T21:00:56.802Z] INFO  [1481]  : Running AddonsBefore for command CMD-AppDeploy...
+[2017-03-23T21:00:56.802Z] DEBUG [1481]  : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
+[2017-03-23T21:00:56.802Z] INFO  [1481]  : Running stage 0 of command CMD-AppDeploy...
+[2017-03-23T21:00:56.802Z] INFO  [1481]  : Running leader election...
+[2017-03-23T21:00:57.052Z] INFO  [1481]  : Instance is Leader.
+[2017-03-23T21:00:57.052Z] DEBUG [1481]  : Loaded 6 actions for stage 0.
+[2017-03-23T21:00:57.052Z] INFO  [1481]  : Running 1 of 6 actions: InfraWriteConfig...
+[2017-03-23T21:00:57.055Z] INFO  [1481]  : Running 2 of 6 actions: DownloadSourceBundle...
+[2017-03-23T21:00:57.345Z] INFO  [1481]  : Running 3 of 6 actions: EbExtensionPreBuild...
+[2017-03-23T21:00:58.299Z] INFO  [1481]  : Running 4 of 6 actions: AppDeployPreHook...
+[2017-03-23T21:01:00.795Z] INFO  [1481]  : Running 5 of 6 actions: EbExtensionPostBuild...
+[2017-03-23T21:01:05.957Z] ERROR [1481]  : Command execution failed: Activity failed. (ElasticBeanstalk::ActivityFatalError)
+caused by: Traceback (most recent call last):
+  File "wishlist/manage.py", line 22, in <module>
+  execute_from_command_line(sys.argv)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line
+  utility.execute()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/__init__.py", line 359, in execute
+  self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/base.py", line 294, in run_from_argv
+  self.execute(*args, **cmd_options)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/core/management/base.py", line 345, in execute
+  output = self.handle(*args, **options)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 193, in handle
+  collected = self.collect()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 124, in collect
+  handler(path, prefixed_path, storage)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 349, in copy_file
+  if not self.delete_file(path, prefixed_path, source_storage):
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 255, in delete_file
+  if self.storage.exists(prefixed_path):
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/storages/backends/s3boto.py", line 454, in exists
+  return k.exists()
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/key.py", line 539, in exists
+  return bool(self.bucket.lookup(self.name, headers=headers))
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 143, in lookup
+  return self.get_key(key_name, headers=headers)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 193, in get_key
+  key, resp = self._get_key_internal(key_name, headers, query_args_l)
+  File "/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py", line 231, in _get_key_internal
+  response.status, response.reason, '')
+  boto.exception.S3ResponseError: S3ResponseError: 403 Forbidden
+  
+   (ElasticBeanstalk::ExternalInvocationError)
+
+
+[2017-03-23T21:01:05.957Z] ERROR [1481]  : Command CMD-AppDeploy failed!
+[2017-03-23T21:01:05.957Z] INFO  [1481]  : Command processor returning results: 
+{"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"(TRUNCATED)..._internal(key_name, headers, query_args_l)\nFile \"/opt/python/run/venv/local/lib/python3.4/site-packages/boto/s3/bucket.py\", line 231, in _get_key_internal\nresponse.status, response.reason, '')\nboto.exception.S3ResponseError: S3ResponseError: 403 Forbidden. \ncontainer_command 03_collectstatic in .ebextensions/02_python.config failed. For more detail, check /var/log/eb-activity.log using console or EB CLI","returncode":1,"events":[]}],"truncated":"true"}
+[2017-03-23T21:01:30.516Z] DEBUG [1805]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-03-23T21:01:30.516Z] DEBUG [1805]  : Checking if the command processor should execute...
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Checking whether the command is applicable to instance (i-0e8b96fb1299a59ae)..
+[2017-03-23T21:01:30.519Z] INFO  [1805]  : Command is applicable to this instance (i-0e8b96fb1299a59ae)..
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Checking if the received command stage is valid..
+[2017-03-23T21:01:30.519Z] INFO  [1805]  : No stage_num in command. Valid stage..
+[2017-03-23T21:01:30.519Z] INFO  [1805]  : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAIVXAO4ZVW6HTRXGA\",\"signature\":\"1CKXufFzNQmt11RLJ+PMXfT3TSc=\",\"security_token\":\"FQoDYXdzEK7\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDGkf+HO3rpINJ8LpwyL+ArVcDU7rhM+V0GkUEYC+bEpXnVuDftYyKd8ghxz8M7VBctVNZboy9U54yQ\\\/JS8UUQ+7dPibB3y1dz1r2HkfCa8mUZNJKgPlw2cwfRQBGjyJi6aSNpanMW0X8+rlV27SXmBJmw9gMysIjFc9EnsvK6fkj1G1zu+5luD1H04yw5iN2u60P2LRJvDU7+GVYIux9wtwM6MdM9Osj66q0l\\\/bQDfZvAygXbOiVq5dzPWaNNoG8fTY65bDTpzs1uiparePyt4rdHnv4GdMvVzTL6CzF1bj0WSBnfm5HEqqL\\\/jxSKHEvOgzHua9tRppaWI5R+dAw0cYLxo5htmAMJpGb\\\/3kpNtnN6cRZ35xLVcZwTmY0Og+nk3PzF3Rd2BBLsbYj4VUiVgXdpmYP18x6iv4KhrA+bBl1jIRQPzwkhMJoerXLOoLv0+A0rAvQT7RmEFmECMMtxxu6kUraX06X4MXkOTk6AQ9uOjm3WS8JJ5d0\\\/SKFEE0jhD7fYy4R7GtzDtZTvjcoqO\\\/QxgU=\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMy0yM1QyMTozMToyOC44MDFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItMzQwMjA3MjU1MDgyIl0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0e8b96fb1299a59ae"],"data":"e2627f9c-100b-11e7-9538-a391ce4ac51d","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"e2627f9c-100b-11e7-9538-a391ce4ac51d","command_timeout":"600"}
+[2017-03-23T21:01:30.519Z] INFO  [1805]  : Command processor should execute command.
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Storing current stage..
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Stage_num does not exist. Not saving null stage. Returning..
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-03-23T21:01:30.519Z] DEBUG [1805]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-03-23T21:01:30.520Z] DEBUG [1805]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-03-23T21:01:30.520Z] INFO  [1805]  : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-03-23T21:01:30.521Z] INFO  [1805]  : Updating Command definition of addon logpublish.
+[2017-03-23T21:01:30.521Z] INFO  [1805]  : Updating Command definition of addon logstreaming.
+[2017-03-23T21:01:30.522Z] DEBUG [1805]  : Loaded definition of Command CMD-TailLogs.
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Executing CMD-TailLogs
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Executing command: CMD-TailLogs...
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Executing command CMD-TailLogs activities...
+[2017-03-23T21:01:30.522Z] DEBUG [1805]  : Setting environment variables..
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Running AddonsBefore for command CMD-TailLogs...
+[2017-03-23T21:01:30.522Z] DEBUG [1805]  : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Running stage 0 of command CMD-TailLogs...
+[2017-03-23T21:01:30.522Z] DEBUG [1805]  : Loaded 1 actions for stage 0.
+[2017-03-23T21:01:30.522Z] INFO  [1805]  : Running 1 of 1 actions: TailLogs...
+
+
+
